@@ -35,7 +35,7 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew clean build -x test
     
-    - name: Upload JAR Artifact
+    - name: Upload JAR
       uses: actions/upload-artifact@v4
       with:
         name: cyberware-jar
