@@ -1,0 +1,34 @@
+CYBERWARE MOD - DATEI-STRUKTUR
+==============================
+
+cyberware-mod-complete/
+│
+├── build.gradle                 (Build-Konfiguration)
+├── INSTALL.md                   (Diese Anleitung!)
+├── README_V3.md                 (Komplette Übersicht)
+├── generate_all_assets.py       (Asset-Generator Script)
+├── RUN_ASSET_GENERATOR.sh       (Start-Script)
+│
+├── src/main/
+│   ├── java/com/cyberware/
+│   │   ├── CyberwareMod.java   (Hauptklasse)
+│   │   ├── item/               (Items)
+│   │   ├── block/              (Blöcke)
+│   │   ├── entity/             (NPCs & Mobs)
+│   │   ├── capabilities/       (Slot-System)
+│   │   ├── conversation/       (Dialog-System)
+│   │   ├── gui/                (GUI)
+│   │   ├── client/             (Player-Renderer)
+│   │   └── network/            (Netzwerk)
+│   │
+│   └── resources/assets/cyberware/
+│       ├── lang/               (Sprachen - DE & EN)
+│       ├── models/item/        (JSON-Modelle - AUTO)
+│       └── textures/item/      (PNG-Texturen - AUTO)
+│
+├── docs/                        (Dokumentation)
+│   ├── FINAL_SUMMARY_V2.md
+│   └── SETUP_ANLEITUNG.md
+│
+└── (Auto-generiert nach gradle build)
+    └── build/libs/cyberware-1.0.0.jar
