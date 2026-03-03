@@ -29,10 +29,11 @@ jobs:
     - name: Generate Assets
       run: python3 generate_all_assets.py
     
+    - name: Make Gradle executable
+      run: chmod +x gradlew
+    
     - name: Build with Gradle
-      run: |
-        chmod +x gradlew
-        ./gradlew clean build -x test
+      run: ./gradlew clean build -x test
     
     - name: Upload JAR Artifact
       uses: actions/upload-artifact@v3
@@ -40,39 +41,3 @@ jobs:
         name: cyberware-jar
         path: build/libs/cyberware-1.0.0.jar
         retention-days: 30
-```
-
-4. **"Commit new file"** klicken
-
----
-
-## ⏳ **DANN LÄUFT DER BUILD!**
-
-Nach dem Commit:
-
-1. Gehe zu: **"Actions"** Tab
-2. Du siehst: **"Build Cyberware Mod JAR"**
-3. Es läuft gerade! ⏳
-4. Warte ~10 Minuten
-5. ✅ **BUILD FERTIG!** (Grüner Haken)
-
----
-
-## 📥 **JAR DOWNLOADEN**
-
-Nach ~10 Minuten:
-
-1. Gehe zu **"Actions"**
-2. Klick auf: **"Build Cyberware Mod JAR"** (grün ✅)
-3. Scroll runter → **"Artifacts"**
-4. Download: **cyberware-jar**
-5. Entpacke die ZIP
-6. Nutze: `cyberware-1.0.0.jar`
-
----
-
-## 🎮 **DANN IN MINECRAFT:**
-```
-cyberware-1.0.0.jar
-        ↓
-.minecraft/mods/
